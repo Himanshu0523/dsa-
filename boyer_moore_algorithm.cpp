@@ -1,10 +1,21 @@
 // Bayer-Moore Algorithm 
 /*
-  string-searching(pattern - matching)
-  used 2 heuristics to skip unnecessary comparisons:
+	Right-to-left comparison:
+ 			Compare pattern with text from rightmost character to left
+	Two heuristics: 
+ 			Use bad character and good suffix rules to skip unnecessary comparisons
+	Efficient skipping: 
+ 			Jump multiple positions when mismatch occurs
+
+
 
   1. Bad Character Heuristic : 
+  			mismatch occurs - text character - caused mismatch
+	 		shift pattern to align charcter - last occurrence in pattern
+	
   2. Good Suffix Heuristic : 
+  			suffix matches - mismatch occures
+	 		shift pattern - align matched suffix - previous occirence 
 */
 
 
